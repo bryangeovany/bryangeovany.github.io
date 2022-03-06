@@ -38,90 +38,58 @@
           </div>
         </div>
         </nav>
+
     <div id="app">
 
         <div class="container mt-5">
-         
+          
       
               <div class="col-md-12">
                 <button class="btn btn-md btn-success" v-on:click="resetForm()">Tambah Data </button>
                 <form class="needs-validation" novalidate>
                   <div class="row">
                     <div class="col-md-6 mb-3">
-                      <label for="Nama_Mahasiswa">Nama Mahasiswa</label>
-                      <input  v-model="Nama_Mahasiswa" type="text" class="form-control" id="Nama_Mahasiswa" placeholder="" value="" required>
+                      <label for="Jam_Keluar">Jam_Keluar</label>
+                      <input  v-model="Jam_Keluar" type="time" class="form-control" id="Jam_Keluar" placeholder="" value="" required>
                       <div class="invalid-feedback">
-                        Valid first name is required.
+                        Valid Jam_Keluar is required.
                       </div>
                     </div>
-                    <div class="col-md-6 mb-3">
-                      <label for="NIM_Mahasiswa">NIM Mahasiswa</label>
-                      <input v-model="NIM_Mahasiswa" type="text" class="form-control" id="NIM_Mahasiswa" placeholder="" value="" required>
-                      <div class="invalid-feedback">
-                        Valid NIM Mahasiswa is required.
+                    <div class="col-md-  mb-3">
+                      <label for="Jam_Kembali">Jam Kembali</label>
+                      <input v-model="Jam_Kembali" type="time" class="form-control" id="Jam_Kembali" placeholder="" value="" required>
+                      <div class= "invalid-feedback">
+                        Valid Jam Kembali is required.
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="mb-3">
+                    <label for="Tujuan_Keluar">Tujuan_Keluar</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                      
+                      </div>
+                      <input v-model="Tujuan_Keluar" type="text" class="form-control" id="Tujuan_Keluar" placeholder="Tujuan_Keluar" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Your Tujuan_Keluar is required.
                       </div>
                     </div>
                   </div>
       
                   <!-- <div class="mb-3">
-                    <label for="Jenis_Kelamin_Mahasiswa">Jenis Kelamin Mahasiswa</label>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-radio"></span>
-                      </div>
-                      <input v-model="Jenis_Kelamin_Mahasiswa" type="text" class="form-control" id="Jenis_Kelamin_Mahasiswa" placeholder="" value="" required>
-                      <div class="invalid-feedback" style="width: 100%;">
-                        Your Jenis_Kelamin_Mahasiswa is required.
-                      </div>
-                    </div>
-                  </div> -->
-                  <div class="mb-3">
-                    <label for="Jenis Kelamin">Jenis_Kelamin_Mahasiswa</label>
-                  <select class="form-select mt-3" placeholder="Jenis_Kelamin_Mahasiswa"  v-model="Jenis_Kelamin_Mahasiswa">
-                    <option >Laki Laki</option>
-                    <option>Perempuan</option>
-                  </select>
-                  </div>
-                  <div class="mb-3">
-                    <label for="Email_Mahasiswa">Email <span class="text-muted">(Optional)</span></label>
-                    <input v-model="Email_Mahasiswa" type="Email_Mahasiswa" class="form-control" id="Email_Mahasiswa" placeholder="you@example.com">
+                    <label for="Approve">Approve <span class="text-muted">(Optional)</span></label>
+                    <input v-model="Approve" type="Approve" class="form-control" id="Approve" placeholder="you@example.com">
                     <div class="invalid-feedback">
-                      Please enter a valid Email_Mahasiswa address for shipping updates.
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <label for="NO_HP_Mahasiswa">NO HP Mahasiswa</label>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-radio"></span>
-                      </div>
-                      <input v-model="NO_HP_Mahasiswa" type="text" class="form-control" id="NO_HP_Mahasiswa" placeholder="" value="" required>
-                      <div class="invalid-feedback" style="width: 100%;">
-                        Your NO_HP_Mahasiswa is required.
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- <div class="mb-3">
-                    <label for="Asrama_Mahasiswa">Asrama Mahasiswa</label>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-radio"></span>
-                      </div>
-                      <input v-model="Asrama_Mahasiswa" type="text" class="form-control" id="Asrama_Mahasiswa" placeholder="" value="" required>
-                      <div class="invalid-feedback" style="width: 100%;">
-                        Your Asrama_Mahasiswa is required.
-                      </div>
+                      Please enter a valid Approve address for shipping updates.
                     </div>
                   </div> -->
-
+      
                   <div class="mb-3">
-                    <label for="Jenis Kelamin">Asrama Mahasiswa</label>
-                  <select class="form-select mt-3" placeholder="Jenis_Kelamin_Mahasiswa"  v-model="Asrama_Mahasiswa">
-                    <option >Joseph</option>
-                    <option>Daniel</option>
-                    <option>Samuel</option>
-                    <option>Naomi</option>
+                    <label for="Approve">Approve</label>
+                  <select class="form-select mt-3" placeholder="Jenis_Kelamin_Mahasiswa"  v-model="Approve">
+                    <option >Approve</option>
+                    <option>Tidak Approve</option>
                   </select>
                   </div>
 
@@ -136,23 +104,19 @@
                 <table class="table table-striped">
                     <tr>
                         <th>ID</th>
-                        <th>Nama Mahasiswa</th>
-                        <th>NIM Mahasiswa</th>
-                        <th>Jenis KelaminMahasiswa</th>
-                        <th>Email Mahasiswa</th>
-                        <th>NO HP Mahasiswa</th>
-                        <th>Asrama Mahasiswa</th>
+                        <th>Jam Keluar</th>
+                        <th>Jam Kembali</th>
+                        <th>Tujuan_Keluar</th>
+                        <th>Approve</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
                     <tr v-for="user in users">
                         <td>{{ user.id }}</td>
-                        <td>{{ user.Nama_Mahasiswa }}</td>
-                        <td>{{ user.NIM_Mahasiswa }}</td>
-                        <td>{{ user.Jenis_Kelamin_Mahasiswa }}</td>
-                        <td>{{ user.Email_Mahasiswa }}</td>
-                        <td>{{ user.NO_HP_Mahasiswa }}</td>
-                        <td>{{ user.Asrama_Mahasiswa }}</td>
+                        <td>{{ user.Jam_Keluar }}</td>
+                        <td>{{ user.Jam_Kembali }}</td>
+                        <td>{{ user.Tujuan_Keluar }}</td>
+                        <td>{{ user.Approve }}</td>
                         <td><button class="btn btn-md btn-info" v-on:click="getEdit(user)">Edit</button></td>
                         <td><button class="btn btn-danger" v-on:click="getDelete(user)">Delete</button></td>
                     </li>
@@ -164,7 +128,7 @@
                 
             
                
-               
+                
               </div>
             </div>
 
@@ -194,19 +158,17 @@
                 userIdDelete: null,
                 editMode: false,
                 deleteMode: false,
-                Nama_Mahasiswa: '',
-                NIM_Mahasiswa: '',
-                Jenis_Kelamin_Mahasiswa: '',
-                Email_Mahasiswa: '',
-                NO_HP_Mahasiswa: '',
-                Asrama_Mahasiswa: '',
+                Jam_Keluar: '',
+                Jam_Kembali: '',
+                Tujuan_Keluar: '',
+                Approve: '',
             },
             mounted: function() {
                 this.getUser();
             },
             methods: {
                 getUser() {
-                    axios.get('https://621c2590768a4e1020a2f82b.mockapi.io/mahasiswa')
+                    axios.get('https://621c2590768a4e1020a2f82b.mockapi.io/SLIP')
                         .then(response => {
                             this.users = response.data;
                             console.log(response);
@@ -216,13 +178,11 @@
                         });
                 },
                 createUser: function(){
-                    axios.post('https://621c2590768a4e1020a2f82b.mockapi.io/mahasiswa', {
-                        Nama_Mahasiswa: this.Nama_Mahasiswa,
-                        NIM_Mahasiswa: this.NIM_Mahasiswa,
-                        Email_Mahasiswa: this.Email_Mahasiswa,
-                        Jenis_Kelamin_Mahasiswa: this.Jenis_Kelamin_Mahasiswa,
-                        NO_HP_Mahasiswa: this.NO_HP_Mahasiswa,
-                        Asrama_Mahasiswa: this.Asrama_Mahasiswa,
+                    axios.post('https://621c2590768a4e1020a2f82b.mockapi.io/SLIP', {
+                        Jam_Keluar: this.Jam_Keluar,
+                        Jam_Kembali: this.Jam_Kembali,
+                        Tujuan_Keluar: this.Tujuan_Keluar,
+                        Approve: this.Approve,
                     })
                     .then(response => {
                             this.getUser();
@@ -238,45 +198,37 @@
                     this.editMode = false;
                     this.deleteMode = false;
                     this.userIdEdit = null;
-                    this.Nama_Mahasiswa = null;
-                    this.NIM_Mahasiswa = null;
-                    this.Jenis_Kelamin_Mahasiswa = null;
-                    this.Email_Mahasiswa = null;
-                    this.NO_HP_Mahasiswa = null;
-                    this.Asrama_Mahasiswa = user.Asrama_Mahasiswa;
+                    this.Jam_Keluar = null;
+                    this.Jam_Kembali = null;
+                    this.Tujuan_Keluar = null;
+                    this.Approve = null;
                 },
                 getEdit: function (user) {
                     this.message = null;
                     this.editMode = true;
                     this.deleteMode = false;
-                    this.userIdEdit = user.id;
-                    this.Nama_Mahasiswa = user.Nama_Mahasiswa;
-                    this.NIM_Mahasiswa = user.NIM_Mahasiswa;
-                    this.Jenis_Kelamin_Mahasiswa = user.Jenis_Kelamin_Mahasiswa;
-                    this.Email_Mahasiswa = user.Email_Mahasiswa;
-                    this.NO_HP_Mahasiswa = user.NO_HP_Mahasiswa;
-                    this.Asrama_Mahasiswa = user.Asrama_Mahasiswa;
+                    this.userIdEdit = user.ID_SLIP;
+                    this.Jam_Keluar = user.Jam_Keluar;
+                    this.Jam_Kembali = user.Jam_Kembali;
+                    this.Tujuan_Keluar = user.Tujuan_Keluar;
+                    this.Approve = user.Approve;
                 },
                 getDelete: function (user) {
                     this.message = null;
                     this.deleteMode = true;
                     this.editMode = false;
-                    this.userIdDelete = user.id;
-                    this.Nama_Mahasiswa = user.Nama_Mahasiswa;
-                    this.NIM_Mahasiswa = user.NIM_Mahasiswa;
-                    this.Jenis_Kelamin_Mahasiswa = user.Jenis_Kelamin_Mahasiswa;
-                    this.Email_Mahasiswa = user.Email_Mahasiswa;
-                    this.NO_HP_Mahasiswa = user.NO_HP_Mahasiswa;
-                    this.Asrama_Mahasiswa = user.Asrama_Mahasiswa;
+                    this.useIdDelete = user.ID_SLIP;
+                    this.Jam_Keluar = user.Jam_Keluar;
+                    this.Jam_Kembali = user.Jam_Kembali;
+                    this.Tujuan_Keluar = user.Tujuan_Keluar;
+                    this.Approve = user.Approve;
                 },
                 updateUser: function () {
-                    axios.put(`https://621c2590768a4e1020a2f82b.mockapi.io/mahasiswa/${this.userIdEdit}`, {
-                            Nama_Mahasiswa: this.Nama_Mahasiswa,
-                            NIM_Mahasiswa: this.NIM_Mahasiswa,
-                            Jenis_Kelamin_Mahasiswa: this.Jenis_Kelamin_Mahasiswa,
-                            Email_Mahasiswa: this.Email_Mahasiswa,
-                            NO_HP_Mahasiswa: this.NO_HP_Mahasiswa,
-                            Asrama_Mahasiswa:this.Asrama_Mahasiswa,
+                    axios.put(`https://621c2590768a4e1020a2f82b.mockapi.io/SLIP/${this.userIdEdit}`, {
+                            Jam_Keluar: this.Jam_Keluar,
+                            Jam_Kembali: this.Jam_Kembali,
+                            Tujuan_Keluar: this.Tujuan_Keluar,
+                            Approve: this.Approve,
                         })
                         .then(res => {
                             // handle success
@@ -290,7 +242,7 @@
                 },
                 // Delete User
                 deleteUser: function () {
-                    axios.delete(`https://621c2590768a4e1020a2f82b.mockapi.io/mahasiswa/${this.userIdDelete}`)
+                    axios.delete(`https://621c2590768a4e1020a2f82b.mockapi.io/SLIP/${this.userIdDelete}`)
                         .then(res => {
                             // handle success
                             this.message = "Your data has been deleted";
